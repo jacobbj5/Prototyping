@@ -186,3 +186,7 @@ Master.pdf
 Content/.DS_Store
 *.json
 *.Rhistory
+
+# Sublime Text project files
+*.sublime-workspace
+*.sublime-project
