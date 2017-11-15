@@ -1,19 +1,10 @@
 \chapter{Software}
 \label{software}
-Følgende afsnit handler om softwarens udvikling. Afsnittet tager udgangspunkt i de specifikke funktionalitetskrav som står beskrevet i afsnit ***KRAV TIL FUNKTONALITET***. På baggrund af kravenenes prioritering beskriver først hvordan et system overordnet kan se ud. Dette forklares abstrakt ved hjælp af et flowchart. Dernæst følger en mere dybdegående forklaring af hvordan programkoden virker.
+Følgende afsnit handler om softwarens udvikling. Afsnittet tager udgangspunkt i de specifikke funktionalitetskrav som står beskrevet i afsnit ***KRAV TIL FUNKTONALITET***. På baggrund af kravenenes prioritering beskriver først hvordan et system overordnet kan se ud. Dernæst følger en  forklaring af hvordan programkoden virker.
 
 \section{Overordnet system}
-Funktionen, Afspil lyd, prioriteres som den vigtigste funktion hvorfor den implementeres først. Funktionen aktiveres som resultat af at brugeren interagere med en sensor. Sensorværdien måles og analyseres derefter. I analysen sammenlignes den målte værdi med en kendt threshold. I tilfældet hvor den målte værdi er højere en thresholdværdien afspilles en lyd.  
-
-\begin{figure}
-\centering
-\includegraphics[scale=0.4]{Figure/protoFlowChart01.png}
-\caption{
-Flowchart for funktionen Afspil lyd. }
-\label{fig:protoFlowChart01.png}
-\end{figure}
-
- Programmet baseret på Arduino (https://www.arduino.cc) og Processing (https://processing.org). Kommunikation mellem Arduino og Processing foregår via protokollen Firmata. 
+Funktionen, Afspil lyd, prioriteres som den vigtigste funktion hvorfor den implementeres først. Funktionen aktiveres som resultat af at brugeren interagere med en sensor.   
+Programmet baseret på Arduino (https://www.arduino.cc) og Processing (https://processing.org). Kommunikation mellem Arduino og Processing foregår via protokollen Firmata. 
  Arduinoen bruges til at aflæse sensorværdier. De målte værdier sendes, via Firmata, videre til Processing som derefter bearbejder informationen.
  Ved at benytte Processing kan PC'ens egen hardware bruges til at bearbejde, lagre og afspille lydfilerne. Denne opsætning er valgt for hurtigt og let at konstruerer en fungerende prototype. 
 
@@ -33,7 +24,14 @@ Lydfilen afspilles ved funktionskaldet
 file.play();
 
 \section{Anden iteration}
-I anden iteration er formålet at afspille 
+I anden iteration er formålet at afspille en lyd når en målt sensorværdi overstige en kendt threshold.   Til at måle sensorværdien benyttes en Arduino Uno. Den målte værdi kommunikeres videre til Processing via Firmata. 
+ 
+import cc.arduino.*;
+import processing.serial.*;
+Arduino arduino;
+
+Jeg kan ikke skrive mere... 
+
 
 
 \begin{figure}
@@ -44,5 +42,4 @@ Flowchart for funktionen Afspil lyd. }
 \label{fig:protoFlowChart02.png}
 \end{figure}
 
-
-arduino+processing 
+ 
