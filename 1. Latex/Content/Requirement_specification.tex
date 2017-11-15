@@ -40,7 +40,30 @@ Brugeren interagere med displayet for at ændre lydstyrken. Displayet signalere,
 \subsection{Tænd/sluk}
 Brugeren interagere med displayet for at tænde eller slukke systemet. Displayet signalere, via grænsefladen til styresystemet, at systemet enten skal tændes eller slukkes. Styresystemet reagere på signalet, hvorefter systemet enten tænder eller slukker
 
+\section{Specifikke krav}
+Følgende afsnit giver en detaljeret beskrivelse af de specifikke krav der måtte være til produktet. Først beskrives kravende til funktionaliteten, derefter kravende til de interne aktører og til sidst beskrives kravende til det samlede system, herunder kvalitetskrav og designkrav. 
 
+\subsection{Krav til funktionalitet}
+Som det fremgår af afsnit ***HENVISNING ÚSE CASES***, skal fire funktioner implementeres. Funktionerne initieres via aktørerne Sensor og Display. Aktørerne virker som brugerinterface, og er dermed brugerens mulighed for at interagere med aktøren Styresystem. Selve funktionerne eksekveres af aktøren Styresystem.
+
+Ved funktionen, Afspil lyd, menes muligheden for at afspille en specifik lydfil ækvivalent til den sensor brugeren interagere med. Lydfilen skal som udgangspunkt imitere en lyd fra et trommesæt. Lyden forventes derfor at bestå af et kompleks signal frem for en ren sinustone. Lyden afspilles umiddelbart efter brugeren har interageret med en sensor, uden mærkbar forsinkelse. En mærkbar forsinkelse defineres som en forsinkelse hvor auditive feedback afspilles tilpas lang tid efter interaktionen med sensoren til at brugeren kan detektere en forsinkelse. Lyden afspilles en enkelt gang ved hver interaktion med en sensor. Hvis brugeren interagere med flere sensorer samtidigt afspilles de respektive lyde samtidig.  
+
+Ved funktionen, Udskift lyd, menes muligheden for at udskifte de specifikke trommelyde. Derved har brugeren mulighed for at udskifter og omarrangere de lyde der frembringes ved at intergere med en sensor. Lydene udskiftes ved at interagere med aktøren display, hvorefter styresystemet ændre de respektive lyde. 
+
+Ved funktionen, Ændr lydstyrke, menes muligheden for at skrue op og ned for lydstyrken af trommelydene. Derved kan brugeren dimensionere lydniveauet så det passe til omgivelserne. Lydstyrken ændres ved at interagere med aktøren display, hvorefter styresystemet ændre lydstyrken.
+
+Ved funktionen, Tænd/Sluk, menes muligheden for at tænde eller slukke for systemet. Derved har brugeren mulighed at vælge hvornår systemet er aktivt og afspiller lyde ved interaktion med sensorerne.
+
+§1 Afspil lyd
+§2 Udskift lyd
+§3 Ændr lydstyrke
+§4 Tænd/Sluk
+
+\subsection{Krav til aktører}
+\subsection{krav til samlet system}
+
+
+ 
 
 
 -----------------------------
@@ -56,6 +79,6 @@ Styringsenheden skal kunne aflæse signalet fra sensorerne, behandler signalet o
 … detailkrav/
 ydelseskrav/
 kvalitetskrav/
-designkrav      
+designkrav/ - flexibel let handske      
 
  
