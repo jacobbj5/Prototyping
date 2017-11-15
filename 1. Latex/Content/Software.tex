@@ -14,16 +14,35 @@ Flowchart for funktionen Afspil lyd. }
 \end{figure}
 
  Programmet baseret på Arduino (https://www.arduino.cc) og Processing (https://processing.org). Kommunikation mellem Arduino og Processing foregår via protokollen Firmata. 
- Arduinoen bruges til at aflæse sensorværdier. De målte værdier sendes, via Firmata, videre til processing som derefter bearbejder informationen.
- Ved at benytte processing kan PC'ens hard
+ Arduinoen bruges til at aflæse sensorværdier. De målte værdier sendes, via Firmata, videre til Processing som derefter bearbejder informationen.
+ Ved at benytte Processing kan PC'ens egen hardware bruges til at bearbejde, lagre og afspille lydfilerne. Denne opsætning er valgt for hurtigt og let at konstruerer en fungerende prototype. 
+
+\section{Første iteration}
+I første iteration er formålet blot at afspille en lydfil i Processing. Til formålet benyttes biblioteket Sound. Biblioteket tilgås med koden
  
- Denne opsætning er valgt for hurtigt og let at konstruerer en fungerende prototype. Via processing kan PC'ens interne hardware tilgås. Derved kan   
+import processing.sound.*;
 
-\section{1. iteration}
-I første iteration 
- Formålet er
+Derefter oprettes en lydfil med navnet file 
 
-processing
+SoundFile file;  
+ 
+file = new SoundFile(this, "FingerD1.wav");
 
-\section{2. iteration}
+Lydfilen afspilles ved funktionskaldet 
+
+file.play();
+
+\section{Anden iteration}
+I anden iteration er formålet at afspille 
+
+
+\begin{figure}
+\centering
+\includegraphics[scale=0.4]{Figure/protoFlowChart02.png}
+\caption{
+Flowchart for funktionen Afspil lyd. }
+\label{fig:protoFlowChart02.png}
+\end{figure}
+
+
 arduino+processing 
