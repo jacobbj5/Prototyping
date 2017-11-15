@@ -13,7 +13,7 @@ Programkoden udvikles i en iterativ proces. Følgende giver en forklaring af pro
 
 Til Arduinoen overføres protokollen Firmata som StandardFirmata. Derved kan funktionaliteten på arduinoen tilgås ved hjælp af Processing. For at  kontakt mellem Arduino og Processing er etableret, er det nødvendigt også at opsætte Processing til kommunikationen. Dette gøres ved at følgende eksekveres:
 
-\begin{figure}
+\begin{figure}[H]
 \includegraphics[scale=0.8]{Figure/programkode01.png}
 \end{figure}
   
@@ -23,7 +23,7 @@ Til sidst initialiseres objektet i funktionen setup(). Her vælges fra Arduino.l
 
 Næste skridt er at kunne afspille lydfiler i processing. Det gøres ved at følgende eksekveres:
 
-\begin{figure}
+\begin{figure}[H]
 \includegraphics[scale=0.8]{Figure/programkode02.png}
 \end{figure}  
  
@@ -35,7 +35,7 @@ Til sidst initialiseres arrayet file, så hver plads i arrayet pares med en lydf
    
 Programmet kan nu kommunikere med arduinoen og de nødvendige lydfiler er klar til afspilning. Derudover skal der bruges tre variabler til at gemme vitale informationer. 
 
-\begin{figure}
+\begin{figure}[H]
 \includegraphics[scale=0.8]{Figure/programkode03.png}
 \end{figure}  
 
@@ -45,7 +45,7 @@ Et boolean array, sensedBefore, sættes som udgangspunkt til false og bruges eft
  
 Følgende beskriver forløbet som foregår ved funktionskaldet draw(). Umiddelbart er formålet med koden at afspille en lydfil hvis en aflæst sensorværdi overskrider threshold. Derudover sørger koden for at lydfilen kun afspilles en enkelt gang så længe sensorværdien er over threshold. 
 
-\begin{figure}
+\begin{figure}[H]
 \includegraphics[scale=0.8]{Figure/programkode04.png}
 \end{figure}  
 
@@ -57,9 +57,9 @@ Er det ikke tilfældet, fordi den aflæste sensorværdi ikke er over threshold e
 
 For loopet gentages for hver plads i arrayet sensor. Ved hver gentagelse har i en tilvækst på én. Anden gang for loopet køres igennem er det derfor sensor[1] som er lig med værdien som aflæses på kanal A1, analogRead(1). Værdien sammenlignes med samme threshold, men nu er det booleanen sensedBefore[1] som skal være false for koden i if statmentet eksikveres. 
 
-Figur \ref{fig:protoFlowChart02.png} illustrere programkoden i funktionskaldet draw(). Denne sekvens køres igennem fra start til slut hver gang draw() eksikveres.            
+\autoref{fig:protoFlowChart03.pdf} illustrere programkoden i funktionskaldet draw(). Denne sekvens køres igennem fra start til slut hver gang draw() eksikveres.            
 
-\begin{figure}
+\begin{figure}[H]
 \centering
 \includegraphics[scale=0.6]{Figure/protoFlowChart03.pdf}
 \caption{
